@@ -16,10 +16,10 @@ from covid19v2 import *
 
 def data_for_country(data, state = "", country = ""):
     # for each country in data
-    for pays in ___:
+    for pays in data:
         # if 'Province/State' key match with state given in argument
         # and if 'Country/Region' key match with country given in argument
-        if pays[___] == ___ and pays[___] == ___:
+        if pays['Province/State'] == state and pays['Country/Region'] == country:
             return pays
 
 
@@ -38,8 +38,8 @@ if __name__ == '__main__':
       print("----------------------------------")
       # for row in coutries:
       #    print(row['Province/State'], row['Country/Region'])
-      france = data_for_country(countries, '', 'France')
-      print(france)
+      italy = data_for_country(countries, '', 'Italy')
+      print(italy)
 
   else:
       print(f'Téléchargement du fichier {file} impossible')
